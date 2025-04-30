@@ -9,7 +9,7 @@ const BackComponent = () => {
   };
 
   return (
-    <div className="mt-3 md:mt-0">
+    <div className="mt-4 mb-6 md:mt-0">
       <button
         onClick={handleBack}
         className="text-md py-2 font-medium text-neutral-950 hover:text-fuchsia-700 dark:text-slate-300 dark:hover:text-slate-100"
