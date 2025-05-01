@@ -147,7 +147,6 @@ const columns: ColumnDef<any>[] = [
     cell: ({ row }) => {
       return (
         <div className="relative flex justify-center">
-          {/* Dropdown Trigger */}
           <DropdownMenu>
             <DropdownMenuTrigger asChild>
               <Button
@@ -161,7 +160,7 @@ const columns: ColumnDef<any>[] = [
               </Button>
             </DropdownMenuTrigger>
 
-            {/* Dropdown Content */}
+            {/* konten isi dropdownya*/}
             <DropdownMenuContent
               align="end"
               className="z-50 min-w-[180px] rounded-md border border-gray-200 bg-white shadow-lg"

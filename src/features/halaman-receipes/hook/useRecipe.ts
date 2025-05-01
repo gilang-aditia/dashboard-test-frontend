@@ -1,8 +1,6 @@
-// src/hooks/useRecipe.ts
 import { useQuery } from "@tanstack/react-query";
 import apiClient from "../../../api/apiClients";
 
-// Type definitions
 interface Recipe {
   id: number;
   name: string;

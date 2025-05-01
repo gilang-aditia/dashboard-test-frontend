@@ -26,7 +26,7 @@ export const DashboardLayout = (props: LayoutProps) => {
           <DashboardMenu />
         </Sidebar>
 
-        {/* Main content */}
+        {/*  content */}
         <main className="flex-1 overflow-x-hidden overflow-y-auto bg-white p-6">
           <BackComponent />
           {props.isCentered ? (

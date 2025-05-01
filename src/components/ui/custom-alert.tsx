@@ -14,7 +14,6 @@ export function CustomAlert({
   status,
   title,
   description,
-  icon,
   className,
 }: CustomAlertProps) {
   const statusStyles = {

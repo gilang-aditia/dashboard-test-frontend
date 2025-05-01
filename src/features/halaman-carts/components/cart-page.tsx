@@ -1,4 +1,3 @@
-// src/pages/CartPage.tsx
 import { useEffect, useState } from "react";
 import { Skeleton } from "../../../components/ui/skeleton";
 import { fetchCarts } from "../hook/service";
@@ -16,7 +15,6 @@ export function CartPage() {
         setLoading(true);
         const response = await fetchCarts();
         if (response.carts.length > 0) {
-          // Tambahkan selected: false ke semua produk
           const cartWithSelection = {
             ...response.carts[0],
             products: response.carts[0].products.map((product) => ({
@@ -68,7 +66,6 @@ export function CartPage() {
     }
   };
 
-  // Hitung item yang dipilih dan totalnya
   const selectedItems = cart?.products.filter((p) => p.selected).length || 0;
   const selectedSubtotal =
     cart?.products

@@ -9,8 +9,8 @@ export default function RecipePage() {
       <CustomAlert
         className="mb-4 border-none"
         status="info"
-        title="Discover Delicious Recipes"
-        description="Browse our collection of recipes from around the world."
+        title="Resep Lezat"
+        description="Temukan Resep lezat yang cocok untuk anda."
         icon={<FileWarningIcon />}
       />
       <RecipeContainer />

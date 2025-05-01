@@ -1,6 +1,3 @@
-// src/features/halaman-receipes/components/recipe-container.tsx
-"use client";
-
 import { Clock, Utensils, Star, Flame, Search, Filter } from "lucide-react";
 import { useState } from "react";
 

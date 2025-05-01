@@ -1,4 +1,3 @@
-import React from "react";
 import { Route } from "react-router-dom";
 import { DashboardLayout } from "../layout/DashboardLayout";
 import ProductList from "../features/halaman-produk";

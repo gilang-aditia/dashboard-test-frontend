@@ -1,6 +1,5 @@
 import { Button } from "../../../components/ui/button";
 
-// src/components/OrderSummary.tsx
 interface OrderSummaryProps {
   selectedItems: number;
   subtotal: number;
