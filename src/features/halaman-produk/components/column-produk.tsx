@@ -144,7 +144,7 @@ const columns: ColumnDef<any>[] = [
     id: "actions",
     header: () => <div className="text-center">Actions</div>,
     enableHiding: false,
-    cell: ({ row }) => {
+    cell: ({}) => {
       return (
         <div className="relative flex justify-center">
           <DropdownMenu>

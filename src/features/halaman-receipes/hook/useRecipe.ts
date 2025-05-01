@@ -1,7 +1,7 @@
 import { useQuery } from "@tanstack/react-query";
 import apiClient from "../../../api/apiClients";
 
-interface Recipe {
+export interface Recipe {
   id: number;
   name: string;
   ingredients: string[];
@@ -33,7 +33,7 @@ interface RecipeParams {
   searchQuery?: string;
 }
 
-interface RecipeQueryResult {
+export interface RecipeQueryResult {
   recipes: Recipe[];
   total: number;
   tags: string[];
@@ -87,6 +87,5 @@ export const useRecipes = (params: RecipeParams) => {
         mealTypes: extractUnique(recipes.flatMap((r) => r.mealType)),
       };
     },
-    staleTime: 5 * 60 * 1000,
   });
 };

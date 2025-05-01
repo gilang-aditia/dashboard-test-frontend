@@ -5,6 +5,7 @@ import { Input } from "../../../components/ui/input";
 import { Button } from "../../../components/ui/button";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { Recipe, RecipeQueryResult, useRecipes } from "../hook/useRecipe";
+import LoadingSpinner from "../../../components/ui/loading-spiner";
 
 const queryClient = new QueryClient();
 
@@ -51,7 +52,6 @@ const RecipeCard = ({ recipe }: { recipe: Recipe }) => (
       src={recipe.image}
       alt={recipe.name}
       className="h-48 w-full object-cover"
-      loading="lazy"
     />
     <div className="p-4">
       <div className="mb-2 flex items-start justify-between">
@@ -90,12 +90,6 @@ const FilterButton = ({
   <Button variant={active ? "default" : "outline"} size="sm" onClick={onClick}>
     {label}
   </Button>
-);
-
-const LoadingSpinner = () => (
-  <div className="flex h-64 items-center justify-center">
-    <div className="border-primary h-12 w-12 animate-spin rounded-full border-2 border-t-2 border-b-2"></div>
-  </div>
 );
 
 const ErrorDisplay = ({ message }: { message?: string }) => (
