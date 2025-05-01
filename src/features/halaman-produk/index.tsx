@@ -8,7 +8,7 @@ export default function ProductList() {
       <h1 className="mb-4 text-2xl font-bold">Product</h1>
       <CustomAlert
         className="mb-4 border-none"
-        status="error"
+        status="info"
         title="Hallo Selamat Datang | Dashboard"
         description="Anda dapat melihat, mengupdate, dan menghapus Produk dari Dashboard."
         icon={<FileWarningIcon />}

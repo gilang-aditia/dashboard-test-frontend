@@ -30,6 +30,9 @@ import {
 } from "../../../components/ui/table";
 import columns from "./column-produk";
 
+import LoadingSpinner from "../../../components/ui/loading-spiner";
+import { useProduct } from "../hook/useProduct";
+
 export function TableProduk() {
   const [sorting, setSorting] = React.useState<SortingState>([]);
   const [columnFilters, setColumnFilters] = React.useState<ColumnFiltersState>(
@@ -39,67 +42,12 @@ export function TableProduk() {
     React.useState<VisibilityState>({});
   const [rowSelection, setRowSelection] = React.useState({});
 
-  const data = [
-    {
-      id: 1,
-      title: "Essence Mascara Lash Princess",
-      description:
-        "The Essence Mascara Lash Princess is a popular mascara known for its volumizing and lengthening effects.",
-      category: "beauty",
-      price: 9.99,
-      stock: 5,
-      brand: "Essence",
-      sku: "RCH45Q1A",
-      rating: 4.5,
-    },
-    {
-      id: 2,
-      title: "Maybelline Fit Me Foundation",
-      description: "A lightweight foundation with natural finish.",
-      category: "beauty",
-      price: 12.5,
-      stock: 12,
-      brand: "Maybelline",
-      sku: "MAYF1234",
-      rating: 4.2,
-    },
-    {
-      id: 3,
-      title: "L'Oréal Paris Infallible Lipstick",
-      description: "Long-wearing lipstick with intense color.",
-      category: "beauty",
-      price: 14.0,
-      stock: 8,
-      brand: "L'Oréal",
-      sku: "LOPLIP889",
-      rating: 4.7,
-    },
-    {
-      id: 4,
-      title: "The Ordinary Niacinamide 10%",
-      description: "A serum that targets blemishes and congested skin.",
-      category: "skincare",
-      price: 6.9,
-      stock: 15,
-      brand: "The Ordinary",
-      sku: "ORDNIA10",
-      rating: 4.8,
-    },
-    {
-      id: 5,
-      title: "CeraVe Moisturizing Cream",
-      description: "Rich, non-greasy, fast-absorbing moisturizing cream.",
-      category: "skincare",
-      price: 15.5,
-      stock: 10,
-      brand: "CeraVe",
-      sku: "CERAM123",
-      rating: 4.6,
-    },
-  ];
+  const { data, isLoading, isError } = useProduct();
+  console.log("Data product:", data);
+  console.log("Is array?", Array.isArray(data));
 
   const table = useReactTable({
-    data,
+    data: data || [],
     columns,
     onSortingChange: setSorting,
     onColumnFiltersChange: setColumnFilters,
@@ -116,6 +64,18 @@ export function TableProduk() {
       rowSelection,
     },
   });
+
+  if (isLoading) {
+    return (
+      <div>
+        <LoadingSpinner />
+      </div>
+    );
+  }
+
+  if (isError) {
+    return <div>Error loading Product</div>;
+  }
 
   return (
     <div className="w-full rounded-lg bg-white p-6">

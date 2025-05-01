@@ -16,7 +16,7 @@ export const DashboardMenus = [
   },
   {
     id: "halamanRecipes",
-    label: "Halaman Resep",
+    label: "Halaman Receipes",
     href: "halamanrecipes",
     icon: <ReceiptCent size={18} />,
   },
