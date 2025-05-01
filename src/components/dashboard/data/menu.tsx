@@ -5,7 +5,7 @@ export const DashboardMenus = [
   {
     id: "dashboard",
     label: "Dashboard",
-    href: "dashboard",
+    href: "/dashboard",
     icon: <Home size={18} />,
   },
   {
