@@ -1,3 +1,30 @@
-#Dashboard+Interaktif
+Dashboard Intraktif
 
-Dashboard Interaktif adalah aplikasi dashboard modern yang dibangun dengan stack teknologi terkini untuk memudahkan manajemen produk, resep, dan transaksi belanja. Proyek ini dirancang dengan fokus pada antarmuka yang intuitif, performa optimal, dan visualisasi data yang informatif.
+🚀 Cara Menjalankan Proyek
+
+Install dependensi
+pnpm install
+
+Jalankan aplikasi dalam mode pengembangan
+pnpm run dev
+
+🚀 Teknologi yang Digunakan
+React – Library JavaScript untuk membangun antarmuka pengguna
+TypeScript – Superset JavaScript dengan sistem pengetikan statis
+Vite – Build tool yang cepat dan modern
+Tailwind CSS – Framework CSS utility-first untuk styling efisien
+TanStack Query (React Query) – Manajemen state & fetching data
+Axios – HTTP client untuk request ke API
+React Router – Library untuk routing SPA di React
+Chart.js – Library visualisasi data berbasis grafik
+Prettier – Formatter kode untuk menjaga konsistensi gaya
+Shadcn UI (opsional) – Komponen UI yang modern & dapat disesuaikan
+
+📄 Halaman yang Tersedia
+Dashboard – Ringkasan dan statistik utama
+Product – Manajemen produk dan daftar item
+Recipe – Manajemen resep dan formulasi produk
+Cart – Keranjang belanja untuk simulasi transaksi
+
+
+
