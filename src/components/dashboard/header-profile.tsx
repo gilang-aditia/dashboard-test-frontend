@@ -26,22 +26,13 @@ export function HeaderProfil() {
         </Button>
       </DropdownMenuTrigger>
 
-      <DropdownMenuContent align="end" sideOffset={8} className="mt-2 w-48">
+      <DropdownMenuContent
+        align="end"
+        sideOffset={8}
+        className="mt-2 w-48 rounded-md bg-white shadow-lg"
+      >
         <DropdownMenuLabel>Akun Saya</DropdownMenuLabel>
         <DropdownMenuSeparator />
-
-        <DropdownMenuGroup>
-          <DropdownMenuItem className="cursor-pointer hover:bg-gray-100 focus:bg-gray-100">
-            <LogOut className="mr-2 h-4 w-4 text-red-500" />
-            <span>Keluar</span>
-            <DropdownMenuShortcut>⇧⌘Q</DropdownMenuShortcut>
-          </DropdownMenuItem>
-        </DropdownMenuGroup>
-      </DropdownMenuContent>
-      <DropdownMenuContent align="end" sideOffset={8} className="mt-2 w-48">
-        <DropdownMenuLabel>Akun Saya</DropdownMenuLabel>
-        <DropdownMenuSeparator />
-
         <DropdownMenuGroup>
           <DropdownMenuItem className="cursor-pointer hover:bg-gray-100 focus:bg-gray-100">
             <LogOut className="mr-2 h-4 w-4 text-red-500" />
