@@ -184,7 +184,7 @@ const ChartCarts = () => {
         <Bar data={barData} options={options} />
       </div>
 
-      <div className="h-[350px]">
+      <div className="mt-16 h-[350px]">
         <h3 className="mb-2 text-sm font-semibold tracking-wider text-gray-500 uppercase dark:text-gray-400">
           Discounted Total per Cart
         </h3>
