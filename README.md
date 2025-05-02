@@ -1,7 +1,7 @@
 
 # Dashboard Interaktif
 
-A brief description of what this project does and who it's for
+react 19, Node V23.11.0, vite 6.3.1, Tailwind V4
 
 ## Cara Mengelola
 
